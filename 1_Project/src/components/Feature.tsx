@@ -1,72 +1,62 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Zap, ShieldCheck } from "lucide-react";
+import { FaRocket, FaShieldAlt, FaBolt } from "react-icons/fa";
 
 const features = [
   {
+    icon: <FaRocket className="text-purple-400 text-4xl mb-4" />,
     title: "Fast Performance",
-    desc: "Optimized for speed and scalability to launch your startup faster.",
-    icon: <Zap className="w-8 h-8 text-purple-400" />,
+    desc: "Experience blazing fast load times with optimized code and modern tech stack.",
   },
   {
-    title: "Smart Design",
-    desc: "Crafted with modern UI/UX practices for maximum impact.",
-    icon: <Lightbulb className="w-8 h-8 text-purple-400" />,
+    icon: <FaShieldAlt className="text-purple-400 text-4xl mb-4" />,
+    title: "Secure by Design",
+    desc: "Your data is safe with end-to-end encryption and enterprise-grade security.",
   },
   {
-    title: "Secure Platform",
-    desc: "Built with industry-grade security to keep your data safe.",
-    icon: <ShieldCheck className="w-8 h-8 text-purple-400" />,
+    icon: <FaBolt className="text-purple-400 text-4xl mb-4" />,
+    title: "Instant Deployment",
+    desc: "Ship your project live in seconds with one-click deployment to the cloud.",
   },
 ];
 
 export default function Feature() {
   return (
-  <>
-    {" "}
-    <section
-      id="features"
-      className="relative py-20 bg-gradient-to-b from-black via-purple-950/40 to-black text-white"
-    >
+    <section id="features" className="relative py-24 bg-gradient-to-br from-purple-900/60 to-purple-950/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        {/* Headings */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold mb-6"
-          initial={{ opacity: 0, y: -20 }}
+          className="text-4xl md:text-5xl font-bold text-white mb-6"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Why Choose <span className="text-purple-400">TechFlow?</span>
+          Powerful Features
         </motion.h2>
         <motion.p
-          className="text-lg text-gray-300 max-w-2xl mx-auto mb-12"
+          className="text-gray-300 max-w-2xl mx-auto mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.2 }}
         >
-          We provide everything you need to launch, scale, and grow your startup
-          — with speed, style, and security.
+          Everything you need to launch, scale, and grow your startup without the
+          hassle.
         </motion.p>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-10">
-          {features.map((feature, i) => (
+        <div className="grid gap-10 md:grid-cols-3">
+          {features.map((f, i) => (
             <motion.div
               key={i}
-              className="p-8 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-lg hover:scale-105 transition-transform"
-              initial={{ opacity: 0, y: 40 }}
+              className="p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2, duration: 0.6 }}
+              transition={{ duration: 0.5, delay: i * 0.2 }}
             >
-              <div className="flex justify-center mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-300">{feature.desc}</p>
+              {f.icon}
+              <h3 className="text-xl font-semibold text-white mb-2">{f.title}</h3>
+              <p className="text-gray-300">{f.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  </>)
+  );
 }
