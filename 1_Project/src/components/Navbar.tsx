@@ -23,14 +23,14 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex rounded-2xl justify-between items-center bg-white/10 backdrop-blur-xl border border-white/20 mt-4 shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex rounded-2xl justify-between items-center bg-white/10 backdrop-blur-xl border border-white/20 mt-2 shadow-lg">
         <motion.h1
           className="text-2xl font-bold text-purple-600"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Yuvraj
+          TechFlow
         </motion.h1>
 
         {/* Links */}

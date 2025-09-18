@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
+import Hero from '../assets/rocket.png';
 
 const HeroSection = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-purple-900 text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items center">
+        <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: -40 }}
@@ -51,7 +52,7 @@ const HeroSection = () => {
             className="relative"
           >
             <div className="w-full h-80 md:h-[28rem] bg-white/10 border border-white/20 rounded-white/20 rounded-3xl brackdrop-blur-lg shadow-2xl flex items-center justify-center">
-              <span className="text-2xl text-gray-">[Hero Image]</span>
+              <span className="text-2xl text-gray-"><img src={Hero} alt="Hero" className="object-cover w-full h-full rounded-3xl" /></span>
             </div>
           </motion.div>
         </div>

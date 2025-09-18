@@ -3,7 +3,8 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Feature from "./components/Feature";
 import Pricing from "./components/Pricing";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           </section>
           {/* Future sections */}
           <section id="pricing"><Pricing/></section>
-          {/* <section id="contact"><Contact /></section> */}
+          <section id="contact"><Contact /></section>
+          <Footer />
         </main>
       </div>
     </Router>
