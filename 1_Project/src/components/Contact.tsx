@@ -4,9 +4,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 bg-gradient-to-b from-purple-900/80 to-purple-950/90 backdrop-blur-sm"
+      className="scroll-mt-24 relative py-24 bg-gradient-to-b from-purple-900/80 to-purple-950/90 backdrop-blur-sm"
     >
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto mt-12 px-6 text-center">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white mv-6"
           initial={{ opacity: 0, y: 40 }}
@@ -16,7 +16,7 @@ export default function Contact() {
           Get in Touch
         </motion.h2>
         <motion.p
-          className="text-gray-300 max-w-2xl mx-auto mb-16"
+          className="text-gray-300 max-w-2xl mx-auto mt-4 mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}

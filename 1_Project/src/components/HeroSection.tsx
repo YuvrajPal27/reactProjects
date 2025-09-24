@@ -4,7 +4,7 @@ import Hero from '../assets/rocket.png';
 const HeroSection = () => {
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-purple-900 text-white overflow-hidden">
+      <section className="scroll-mt-24 relative min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-purple-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div

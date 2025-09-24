@@ -28,9 +28,9 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="relative py-24 bg-gradient-to-b from-purple-950/80 to-purple-900/80 backdrop-blur-sm"
+      className="scroll-mt-24 relative py-24 bg-gradient-to-b from-purple-950/80 to-purple-900/80 backdrop-blur-sm"
     >
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto mt-12 px-6 text-center">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white mb-6"
           initial={{ opacity: 0, y: 40 }}

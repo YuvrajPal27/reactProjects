@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useGlobalContext } from "../context/GlobalContext";
 
 function Navbar() {
   const [active, setActive] = useState("hero");
+  const { darkMode, toggleDarkMode } = useGlobalContext();
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -58,13 +60,26 @@ function Navbar() {
         </ul>
 
         {/* CTA Button */}
-        <motion.button
+        <div className="flex items-center gap-4">
+          <motion.button
+          onClick={() => (window.location.href = "#pricing")}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="hidden md:block px-5 py-2 bg-purple-500/80 text-white rounded-lg font-semibold shadow-lg hover:bg-purple-600/90"
         >
           Get Started
         </motion.button>
+        {/* Dark Mode Toggle */}
+        <motion.button
+        whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        onClick={toggleDarkMode}
+        className="hidden md:block px-5 py-2 w-26 bg-purple-500/80 text-white rounded-lg font-semibold shadow-lg hover:bg-purple-600/90"
+      >
+        {darkMode ? "🌙 Dark" : "☀️ Light"}
+      </motion.button>
+        </div>
+        
       </div>
     </nav>
   );
