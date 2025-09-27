@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
   const [length, setLength] = useState(8);
@@ -6,19 +6,26 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("");
 
+  const passwordRef = useRef(null);
+
   const passGen = useCallback(() => {
-    let pass = ""
-    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-    if (numAllowed) str += "0123456789"
-    if (charAllowed) str += "!@#$%^&*()_+"
+    let pass = "";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    if (numAllowed) str += "0123456789";
+    if (charAllowed) str += "!@#$%^&*()_+";
 
     for (let i = 1; i <= length; i++) {
-      let char = Math.floor(Math.random * str.length + 1);
+      let char = Math.floor(Math.random() * str.length);
       pass += str.charAt(char);
     }
 
     setPassword(pass);
-  }, []);
+  }, [length, numAllowed, charAllowed, setPassword]);
+
+  const copyPassToClip = useCallback(() => {
+    passwordRef.current?.select();
+    window.navigator.clipboard.writeText(password);
+  }, [password]);
 
   useEffect(() => {
     passGen();
@@ -33,8 +40,12 @@ function App() {
         className="outline-none w-full py-1 px-3 mx-auto my-4 bg-white rounded-2xl"
         placeholder="Your Secure Password"
         readOnly
+        ref={passwordRef}
       />
-      <button className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0">
+      <button
+        onClick={copyPassToClip}
+        className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
+      >
         copy
       </button>
       <div className="flex text-sm gap-x-2">
@@ -56,11 +67,7 @@ function App() {
             type="checkbox"
             defaultChecked={numAllowed}
             id="numberInput"
-            onChange={() => {
-              setNumAllowed((prev) => {
-                !prev;
-              });
-            }}
+            onChange={() => setNumAllowed((prev) => !prev)}
           />
           <label htmlFor="numberInput">Numbers</label>
         </div>
@@ -69,11 +76,7 @@ function App() {
             type="checkbox"
             defaultChecked={charAllowed}
             id="characterInput"
-            onChange={() => {
-              setCharAllowed((prev) => {
-                !prev;
-              });
-            }}
+            onChange={() => setCharAllowed((prev) => !prev)}
           />
           <label htmlFor="characterInput">Characters</label>
         </div>
