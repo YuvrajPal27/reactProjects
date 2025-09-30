@@ -1,16 +1,26 @@
-# React + Vite
+# Currency Converter (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app that converts amounts between different currencies using real-time exchange rates.
 
-Currently, two official plugins are available:
+## 🧠 What I Learned
+- Integrated a currency conversion API to fetch real-time exchange rates.
+- Managed state for user inputs and conversion results.
+- Implemented dropdowns for selecting currencies and a button to trigger conversion.
+- Enhanced user experience with input validation and error handling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Features
+- Input fields for amount and currency selection.
+- Real-time conversion upon button click.
+- Error handling for invalid inputs or API issues.
 
-## React Compiler
+## 🚀 Tech Stack
+- React
+- Axios (for API requests)
+- CSS
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 How to Run
+```bash
+git clone https://github.com/YuvrajPal27/reactProjects.git
+cd reactProjects/04_currencyConverter
+npm install
+npm start
