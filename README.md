@@ -1,18 +1,23 @@
-<h1 align="center">🚀 React Projects Playground</h1>
+# React Projects Playground
 
-<p align="center">
-  <i>A collection of React projects I’m building while learning and growing as a frontend developer.</i>
-</p>
+A collection of React projects I'm building to learn and grow as a frontend developer.
 
----
+## 🚀 Projects
 
-## 🛠️ Tech Stack & Tools
-<p align="left">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
-  <img src="https://img.shields.io/badge/Firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
-  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-</p>
+1. **02_bgChanger**: A simple app that changes the background color dynamically.
+2. **03_useEffect, useRef and useCallback**: Demonstrates the use of React hooks for side effects, refs, and memoization.
+3. **04_currencyConverter**: A currency converter app utilizing real-time exchange rates.
 
+## 🧠 Tech Stack
 
+- React
+- JavaScript (ES6+)
+- CSS
+
+## 🛠 Setup & Run
+
+```bash
+git clone https://github.com/YuvrajPal27/reactProjects.git
+cd reactProjects/PROJECT_FOLDER
+npm install
+npm start
