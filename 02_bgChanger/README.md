@@ -1,16 +1,27 @@
-# React + Vite
+# Background Color Changer (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app that changes the background color dynamically using buttons and inputs.  
 
-Currently, two official plugins are available:
+## What I Learned
+- Using **useState** to handle dynamic values  
+- Updating styles in React based on state  
+- Handling events like button clicks and input changes  
+- Basic React project structure and component usage  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Default background color  
+- Buttons for preset colors  
+- Input field for custom colors  
+- Real-time background update  
 
-## React Compiler
+## Tech Stack
+- React (Create React App)  
+- JavaScript (ES6+)  
+- CSS  
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run Locally
+```bash
+git clone https://github.com/YuvrajPal27/reactProjects.git
+cd reactProjects/02_bgChanger
+npm install
+npm start
